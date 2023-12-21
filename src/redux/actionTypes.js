@@ -1,2 +1,0 @@
-export const CHANGE_QUESTION = "CHANGE_QUESTION"
-export const CHANGE_SCORE = "CHANGE_SCORE"
