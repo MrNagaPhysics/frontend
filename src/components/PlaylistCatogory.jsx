@@ -3,19 +3,34 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemButton from '@mui/material/ListItemButton';
+import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import ClassIcon from '@mui/icons-material/Class';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
 import { blue } from '@mui/material/colors';
 
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ListItemIcon from '@mui/material/ListItemIcon';
+
 export default function PlaylistCatogory() {
+  const [open, setOpen] = React.useState(true);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', maxWidth: 552, bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
           <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">
-            <ClassIcon />
+            <ClassIcon fontSize='large'/>
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="Y12 Key Skills"/>
@@ -23,19 +38,32 @@ export default function PlaylistCatogory() {
       <ListItem>
         <ListItemAvatar>
           <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">
-            <EngineeringIcon />
+            <EngineeringIcon fontSize='large'/>
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="Mechanics" />
       </ListItem>
-      <ListItem>
+      <ListItemButton onClick={handleClick}>
+        <ListItemIcon>
         <ListItemAvatar>
           <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">
-            <BatteryChargingFullIcon/>
+            <BatteryChargingFullIcon fontSize='large'/>
           </Avatar>
         </ListItemAvatar>
+        </ListItemIcon>
         <ListItemText primary="Electricity"/>
-      </ListItem>
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Starred" />
+          </ListItemButton>
+        </List>
+      </Collapse>
     </List>
   );
 }
