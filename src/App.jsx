@@ -1,9 +1,11 @@
 import './App.css';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
+import YearGroups from './components/YearGroups';
 import Quiz from "./components/Quiz"
 import { Box, Container } from '@mui/material';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import PlaylistCatogory from './components/PlaylistCatogory';
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
               </Routes>
 
               <Routes>
-              <Route exact path="/" element = {<Home  />} />
+              <Route exact path="/" element = {<YearGroups/>} />
               </Routes>
 
             </Router>

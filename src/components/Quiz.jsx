@@ -108,7 +108,7 @@ function Quiz() {
     setLock(false);
     setResult(false);
     setScore(0);
-    window.location.href="https://www.mrnagaphysics.com";
+    window.location.href="/";
   }
 
     return (
@@ -127,7 +127,7 @@ function Quiz() {
                   mcqOptions.map(
                       mcq => {
                           return (
-                            <li key={mcq.id} onClick={handleClickAnswer} id={mcq.choice_text}>
+                            <li class="options" key={mcq.id} onClick={handleClickAnswer} id={mcq.choice_text}>
                               {mcq.choice_text}
                             </li>
                           )

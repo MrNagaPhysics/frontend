@@ -1,12 +1,10 @@
-
-
 hr{
     height:2px;
     border: none;
     background: black;
 }
 
-ul li{
+.options{
     display: flex;
     align-items: center;
     height: 70px;
@@ -20,7 +18,7 @@ ul li{
     box-shadow: 0 5px 0 #DDDDDD;
 }
 
-ul li:active{
+.options:active{
     box-shadow: none;
     transform: translateY(5px);
 }
