@@ -14,7 +14,6 @@ import { blue } from '@mui/material/colors';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
 export default function PlaylistCatogory() {
@@ -26,7 +25,7 @@ export default function PlaylistCatogory() {
 
 
   return (
-    <List sx={{ width: '100%', maxWidth: 552, bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
           <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">
@@ -56,11 +55,11 @@ export default function PlaylistCatogory() {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton sx={{ pl: 4 }} href="/topic">
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Starred" />
+            <ListItemText primary="3.01-3.02 Electricity definitions" />
           </ListItemButton>
         </List>
       </Collapse>

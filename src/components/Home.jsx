@@ -24,9 +24,9 @@ const Home = () => {
     return (
         <Box mt={5}>
             <Paper elevation={2} pb={5}>
-            <Typography variant='h5' pt={2} pl={2}textAlign='left'> Quiz App:</Typography>
+            <Typography variant='h5' py={2} pl={2}textAlign='left'> Quiz App:</Typography>
             
-            <List sx={{ width: '100%', maxWidth: 500, bgcolor: 'background.paper' }}>
+            <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
           <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">

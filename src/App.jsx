@@ -1,19 +1,29 @@
 import './App.css';
-import Home from './components/Home';
 import NavBar from './components/NavBar';
 import YearGroups from './components/YearGroups';
 import Quiz from "./components/Quiz"
 import { Box, Container } from '@mui/material';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import PlaylistCatogory from './components/PlaylistCatogory';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Topic from './components/Topic'
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 
 function App() {
   return (
     <>
+    <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
         <NavBar />
         
-        <Container maxWidth="sm">
-          <Box textAlign="center" mt={5}>
+        <Container maxWidth="md">
+          <Box textAlign="center" mt={4}>
             <Router>
               <Routes>
                 {/* uncomment in developenv */}
@@ -27,9 +37,14 @@ function App() {
               <Route exact path="/" element = {<YearGroups/>} />
               </Routes>
 
+              <Routes>
+              <Route exact path="/topic" element = {<Topic />} />
+              </Routes>
+
             </Router>
           </Box>
         </Container>
+        </ThemeProvider>
     </>
   );
 }

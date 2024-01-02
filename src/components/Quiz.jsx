@@ -114,7 +114,7 @@ function Quiz() {
     return (
         <Box>
             <Stack>
-              <LinearProgress variant="determinate" value={((questionIndex)+(result?(1):(0)))/(length)*100} />
+              <LinearProgress variant="determinate" style={{padding: "2px"}} value={((questionIndex)+(result?(1):(0)))/(length)*100} />
             </Stack>
 
             {result?<></>:<>
@@ -122,12 +122,12 @@ function Quiz() {
               Question {questionIndex+1}:{questionTitle}
             </Typography>
 
-            <ul>
+            <ul className="wholequestion">
               {
                   mcqOptions.map(
                       mcq => {
                           return (
-                            <li class="options" key={mcq.id} onClick={handleClickAnswer} id={mcq.choice_text}>
+                            <li className="options" key={mcq.id} onClick={handleClickAnswer} id={mcq.choice_text}>
                               {mcq.choice_text}
                             </li>
                           )

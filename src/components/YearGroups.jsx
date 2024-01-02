@@ -8,7 +8,7 @@ export default function YearGroups() {
   return (
     <>
     <Paper elevation={2} pb={5}>
-    <Typography variant='h5' pt={2} pl={2}textAlign='left'> Year 12:</Typography>
+    <Typography variant='h5' py={2} px={2}textAlign='left'> Year 12:</Typography>
         <PlaylistCatogory />
     </Paper>
 

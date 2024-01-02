@@ -16,6 +16,8 @@ hr{
     cursor: pointer;
     background-color: #FAFAFA;
     box-shadow: 0 5px 0 #DDDDDD;
+    color: black;
+    /* color:white; */
 }
 
 .options:active{
