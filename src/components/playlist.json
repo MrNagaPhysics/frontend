@@ -1,0 +1,26 @@
+{
+    "playlist_name": "Y12: Revision Shorts",
+    "slug": "y12-revision-shorts",
+    "playlistcategory_set": [
+        {
+            "category_title": "Y12 Revision Key Physics Skills",
+            "video_range": "",
+            "slug": "y12-revision-key-physics-skills"
+        },
+        {
+            "category_title": "Y12 Revision Mechanics",
+            "video_range": "",
+            "slug": "y12-revision-mechanics"
+        },
+        {
+            "category_title": "Y12 Revision Electricity",
+            "video_range": "",
+            "slug": "y12-revision-electricity"
+        },
+        {
+            "category_title": "Y12 Revision Materials",
+            "video_range": "",
+            "slug": "y12-revision-materials"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import YearGroups from './components/YearGroups';
+import HomePage from './components/HomePage';
 import Quiz from "./components/Quiz"
 import { Box, Container } from '@mui/material';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -34,7 +34,7 @@ function App() {
               </Routes>
 
               <Routes>
-              <Route exact path="/" element = {<YearGroups/>} />
+              <Route exact path="/" element = {<HomePage />} />
               </Routes>
 
               <Routes>

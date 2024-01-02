@@ -11,58 +11,25 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
 import { blue } from '@mui/material/colors';
 
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
+
 import StarBorder from '@mui/icons-material/StarBorder';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
-export default function PlaylistCatogory() {
-  const [open, setOpen] = React.useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
-
+const PlaylistCategory = ({ categoryTitle, videoRange, slug }) => {
+  if (!categoryTitle) {
+    categoryTitle = "No category title set"
+  }
   return (
-    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">
-            <ClassIcon fontSize='large'/>
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Y12 Key Skills"/>
-      </ListItem>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">
-            <EngineeringIcon fontSize='large'/>
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Mechanics" />
-      </ListItem>
-      <ListItemButton onClick={handleClick}>
+    <List component="div" disablePadding>
+      <ListItemButton sx={{ pl: 4 }} href="/topic">
         <ListItemIcon>
-        <ListItemAvatar>
-          <Avatar sx={{ bgcolor: blue[500] }} variant="rounded">
-            <BatteryChargingFullIcon fontSize='large'/>
-          </Avatar>
-        </ListItemAvatar>
+          <StarBorder />
         </ListItemIcon>
-        <ListItemText primary="Electricity"/>
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText primary={`${videoRange} - ${categoryTitle}}`} />
       </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }} href="/topic">
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="3.01-3.02 Electricity definitions" />
-          </ListItemButton>
-        </List>
-      </Collapse>
     </List>
-  );
+  )
 }
+
+
+export default PlaylistCategory

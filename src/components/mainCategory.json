@@ -1,0 +1,22 @@
+{
+    "title": "Equation Sheets",
+    "subresourcecategory_set": [
+        {
+            "title": "Equation Sheets",
+            "files": [
+                {
+                    "pdf_name": "AQA_A-level_Physics_Equation_sheet.pdf",
+                    "pdf_url": "/media/all_pdfs/AQA_A-level_Physics_Equation_sheet.pdf"
+                },
+                {
+                    "pdf_name": "OCR_A-level_Physics_Equation_Sheet.pdf",
+                    "pdf_url": "/media/all_pdfs/OCR_A-level_Physics_Equation_Sheet.pdf"
+                },
+                {
+                    "pdf_name": "EDEXCEL_A-level_Physics_Equation_Sheet.pdf",
+                    "pdf_url": "/media/all_pdfs/EDEXCEL_A-level_Physics_Equation_Sheet.pdf"
+                }
+            ]
+        }
+    ]
+}

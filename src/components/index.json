@@ -1,0 +1,140 @@
+{
+    "year_groups": [
+        {
+            "year_group": "Y12",
+            "slug": "y12",
+            "playlist_set": [
+                {
+                    "playlist_name": "Y12: Physics Demos",
+                    "slug": "y12-physics-demos"
+                },
+                {
+                    "playlist_name": "Y12: Revision Shorts",
+                    "slug": "y12-revision-shorts"
+                },
+                {
+                    "playlist_name": "Y12: Materials",
+                    "slug": "y12-materials"
+                },
+                {
+                    "playlist_name": "Y12: Key Physics Skills",
+                    "slug": "y12-key-physics-skills"
+                },
+                {
+                    "playlist_name": "Y12: Waves and Optics",
+                    "slug": "y12-waves-and-optics"
+                },
+                {
+                    "playlist_name": "Y12: Particles and Quantum",
+                    "slug": "y12-particles-and-quantum"
+                },
+                {
+                    "playlist_name": "Y12: Electricity",
+                    "slug": "y12-electricity"
+                },
+                {
+                    "playlist_name": "Y12: Mechanics",
+                    "slug": "y12-mechanics"
+                }
+            ]
+        },
+        {
+            "year_group": "Y12 and Y13",
+            "slug": "y12-and-y13",
+            "playlist_set": [
+                {
+                    "playlist_name": "Y12 and Y13 : Practical Skills",
+                    "slug": "y12-and-y13-practical-skills"
+                },
+                {
+                    "playlist_name": "Y12 and Y13: Learning Skills",
+                    "slug": "y12-and-y13-learning-skills"
+                }
+            ]
+        },
+        {
+            "year_group": "Y13",
+            "slug": "y13",
+            "playlist_set": [
+                {
+                    "playlist_name": "Y13: Physics Demos",
+                    "slug": "y13-physics-demos"
+                },
+                {
+                    "playlist_name": "Y13: Revision Shorts",
+                    "slug": "y13-revision-shorts"
+                },
+                {
+                    "playlist_name": "Y13: Nuclear Physics",
+                    "slug": "y13-nuclear-physics"
+                },
+                {
+                    "playlist_name": "Y13: Turning Points in Physics",
+                    "slug": "y13-turning-points-in-physics"
+                },
+                {
+                    "playlist_name": "Y13: Thermal Physics & Ideal Gases",
+                    "slug": "y13-thermal-physics-ideal-gases"
+                },
+                {
+                    "playlist_name": "Y13: Magnetic fields",
+                    "slug": "y13-magnetic-fields"
+                },
+                {
+                    "playlist_name": "Y13: Capacitors",
+                    "slug": "y13-capacitors"
+                },
+                {
+                    "playlist_name": "Y13: Electric fields",
+                    "slug": "y13-electric-fields"
+                },
+                {
+                    "playlist_name": "Y13 : Gravitational field",
+                    "slug": "y13-gravitational-field"
+                },
+                {
+                    "playlist_name": "Y13: Simple Harmonic Motion",
+                    "slug": "y13-simple-harmonic-motion"
+                },
+                {
+                    "playlist_name": "Y13: Circular Motion",
+                    "slug": "y13-circular-motion"
+                }
+            ]
+        }
+    ],
+    "main_resource_categories": [
+        {
+            "title": "Equation Sheets",
+            "slug": "equation-sheets"
+        },
+        {
+            "title": "Pre-work booklets & Trackers",
+            "slug": "pre-work-booklets-trackers"
+        },
+        {
+            "title": "Exam Question Packs",
+            "slug": "exam-question-packs"
+        },
+        {
+            "title": "AQA New Spec",
+            "slug": "aqa-new-spec"
+        },
+        {
+            "title": "AQA Old Spec",
+            "slug": "aqa-old-spec"
+        },
+        {
+            "title": "Oxford International AQA",
+            "slug": "oxford-international-aqa"
+        },
+        {
+            "title": "OCR New Spec",
+            "slug": "ocr-new-spec"
+        },
+        {
+            "title": "OCR Old Spec",
+            "slug": "ocr-old-spec"
+        }
+    ]
+}

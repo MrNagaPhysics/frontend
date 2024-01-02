@@ -3,7 +3,6 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemButton from '@mui/material/ListItemButton';
 import Avatar from '@mui/material/Avatar';
 import { Box} from "@mui/material"
 import { useNavigate } from "react-router-dom";
@@ -11,7 +10,7 @@ import Paper from '@mui/material/Paper';
 import QuizIcon from '@mui/icons-material/Quiz';
 import { blue } from '@mui/material/colors';
 
-const Home = () => {
+const QuizMenu = () => {
 
 
     const navigate = useNavigate();
@@ -43,4 +42,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default QuizMenu;
