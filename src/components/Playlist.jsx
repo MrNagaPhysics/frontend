@@ -13,13 +13,19 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import PlaylistCategory from './PlaylistCatogory';
 
-const Playlist = ({ playlistName, playlistCategoriesData }) => {
-  // State to control w
-  const [open, setOpen] = useState(false);
-  const handleClick = () => {
-    setOpen(!open)
-  }
-  console.log(playlistCategoriesData)
+const Playlist = (props) => {
+
+  //Getting data from props
+  const [playlistCategoriesData,setPlaylistCategoriesData] = useState(props.playlistCategoriesData);
+  const [playlistName,setPlaylistName] = useState(props.playlistName);
+
+  console.log(playlistCategoriesData);
+
+    // State to control w
+    const [open, setOpen] = useState(false);
+    const handleClick = () => {
+      setOpen(!open)
+    }
 
   return (
     <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
@@ -39,13 +45,13 @@ const Playlist = ({ playlistName, playlistCategoriesData }) => {
         {
           playlistCategoriesData.map(
             playlistCategoryData => {
-              const categoryTitle = playlistCategoryData['category_title']
-              const videoRange = playlistCategoryData['video_range']
-              const slug = playlistCategoryData['slug']
-              return <PlaylistCategory categoryTitle={categoryTitle} videoRange={videoRange} slug={slug}/>
+              const categoryTitle = playlistCategoryData.category_title;
+              const videoRange = playlistCategoryData.video_range;
+              return <PlaylistCategory categoryTitle={categoryTitle} videoRange={videoRange}/>
            }
 
           )
+          
         }
   
         
