@@ -15,9 +15,9 @@ import { blue } from '@mui/material/colors';
 import StarBorder from '@mui/icons-material/StarBorder';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
-const PlaylistCategory = ({ categoryTitle, videoRange, slug }) => {
-  if (!categoryTitle) {
-    categoryTitle = "No category title set"
+const PlaylistCategory = ({ playlistCategoryName, videoRange, videos }) => {
+  if (!videoRange) {
+    videoRange = "Not Provided"
   }
   return (
     <List component="div" disablePadding>
@@ -25,7 +25,7 @@ const PlaylistCategory = ({ categoryTitle, videoRange, slug }) => {
         <ListItemIcon>
           <StarBorder />
         </ListItemIcon>
-        <ListItemText primary={`${videoRange} - ${categoryTitle}}`} />
+        <ListItemText primary={`${videoRange} - ${playlistCategoryName}}`} />
       </ListItemButton>
     </List>
   )
