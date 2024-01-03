@@ -15,16 +15,11 @@ const YearGroup = (props) => {
 
   //States that deal with imported JSON
   const [playlist,setPlaylist] = useState(PlaylistData);
-  const [categoryTitles,setCategoryTitles] = useState(null)
+  var PlCatData = [];
   
-  // console.log(playlist);
-
+console.log(playlist)
   //match playlistSet from props with playlist from JSON
-playlistSet.forEach( element => { 
-  if (element.playlist_name === playlist.playlist_name){
-    //
-  } 
-});
+
 
   return (
     <>
@@ -34,9 +29,13 @@ playlistSet.forEach( element => {
           playlistSet.map(
             element => {
               const playlistName = element.playlist_name;
-              const playlistCategoriesData = playlist.playlistcategory_set
+              var playlistCategoriesData = [];
+              if (playlistName === playlist.playlist_name){
+                playlistCategoriesData = playlist.playlistcategory_set
+              } else {
+                playlistCategoriesData = [];
+              }
               return <Playlist playlistName={playlistName} playlistCategoriesData = {playlistCategoriesData}/>
-              
             }
           )
         }

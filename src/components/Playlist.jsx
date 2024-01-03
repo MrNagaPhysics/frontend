@@ -19,8 +19,6 @@ const Playlist = (props) => {
   const [playlistCategoriesData,setPlaylistCategoriesData] = useState(props.playlistCategoriesData);
   const [playlistName,setPlaylistName] = useState(props.playlistName);
 
-  console.log(playlistCategoriesData);
-
     // State to control w
     const [open, setOpen] = useState(false);
     const handleClick = () => {
