@@ -11,7 +11,7 @@ import { useState} from "react";
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import PlaylistCategory from './PlaylistCatogory';
+import PlaylistCategory from './PlaylistCategory';
 
 const Playlist = ({ playlistName, playlistCategories }) => {
   // State to control whether a playlist section should collapse on click or expand. Defaults to being closed.
