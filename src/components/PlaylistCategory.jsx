@@ -10,8 +10,6 @@ import ClassIcon from '@mui/icons-material/Class';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
 import { blue } from '@mui/material/colors';
-
-
 import StarBorder from '@mui/icons-material/StarBorder';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
@@ -25,7 +23,11 @@ const PlaylistCategory = ({ playlistCategoryName, videoRange, videos }) => {
         <ListItemIcon>
           <StarBorder />
         </ListItemIcon>
+<<<<<<< HEAD:src/components/PlaylistCategory.jsx
         <ListItemText primary={`${videoRange} - ${playlistCategoryName}`} />
+=======
+        <ListItemText primary={`${videoRange} : ${categoryTitle}`} />
+>>>>>>> origin/main:src/components/PlaylistCatogory.jsx
       </ListItemButton>
     </List>
   )
