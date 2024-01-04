@@ -43,33 +43,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-{/* <IconButton
-size="large"
-aria-label="more options"
-aria-controls="menu-options"
-aria-haspopup="true"
-onClick={handleMenu}
-color="inherit"
->
-<MenuIcon/>
-</IconButton>
-<Menu
-id="menu-options"
-anchorEl={anchorEl}
-anchorOrigin={{
-  vertical: 'top',
-  horizontal: 'right',
-}}
-transformOrigin={{
-  vertical: 'top',
-  horizontal: 'right',
-}}
-getContentAnchorEl={null}
-open={open}
-onClose={handleClose}
->
-<MenuItem onClick={handleClose}>Option 1</MenuItem>
-<MenuItem onClick={handleClose}>Option 2</MenuItem>
-
-</Menu> */}

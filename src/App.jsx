@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Topic from './components/Topic'
+import Login from './components/Login'
+import AccountMenu from './components/AccountMenu';
 
 const darkTheme = createTheme({
   palette: {
@@ -18,33 +20,35 @@ const darkTheme = createTheme({
 function App() {
   return (
     <>
+       <Router>
     <ThemeProvider theme={darkTheme}>
     <CssBaseline />
         <NavBar />
         
         <Container maxWidth="md">
           <Box textAlign="center" mt={4}>
-            <Router>
+         
               <Routes>
                 {/* uncomment in developenv */}
               {/* <Route exact path="quiz/:id" element = {<Quiz />} /> */}
 
               {/* uncomment in local env */}
               <Route exact path="quiz" element = {<Quiz />} />
-              </Routes>
 
-              <Routes>
+
               <Route exact path="/" element = {<HomePage />} />
-              </Routes>
 
-              <Routes>
               <Route exact path="/topic" element = {<Topic />} />
+           
+              <Route exact path="/AccountMenu" element = {<AccountMenu />} />
+              <Route exact path="/login" element = {<Login />} />
               </Routes>
 
-            </Router>
+        
           </Box>
         </Container>
         </ThemeProvider>
+        </Router>
     </>
   );
 }

@@ -9,16 +9,28 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import { Login } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 export default function AccountMenu() {
+
+  const navigate =useNavigate();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const login= () => {
+    navigate("/login");
+  }
+
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -82,11 +94,11 @@ export default function AccountMenu() {
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem href="/login" onClick={login}>
           <ListItemIcon>
-            <Logout fontSize="small" />
+            <Login fontSize="small" />
           </ListItemIcon>
-          Logout
+          LogIn
         </MenuItem>
       </Menu>
     </React.Fragment>
