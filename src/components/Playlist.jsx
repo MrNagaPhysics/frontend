@@ -13,26 +13,12 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import PlaylistCategory from './PlaylistCategory';
 
-<<<<<<< HEAD
 const Playlist = ({ playlistName, playlistCategories }) => {
   // State to control whether a playlist section should collapse on click or expand. Defaults to being closed.
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open)
   }
-=======
-const Playlist = (props) => {
-
-  //Getting data from props
-  const [playlistCategoriesData,setPlaylistCategoriesData] = useState(props.playlistCategoriesData);
-  const [playlistName,setPlaylistName] = useState(props.playlistName);
-
-    // State to control w
-    const [open, setOpen] = useState(false);
-    const handleClick = () => {
-      setOpen(!open)
-    }
->>>>>>> origin/main
 
   return (
     <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
@@ -50,7 +36,6 @@ const Playlist = (props) => {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         {
-<<<<<<< HEAD
           playlistCategories.map(
             playlistCategory => {
               const playlistCategoryName = playlistCategory['category_title']
@@ -63,20 +48,6 @@ const Playlist = (props) => {
 
           )
         } 
-=======
-          playlistCategoriesData.map(
-            playlistCategoryData => {
-              const categoryTitle = playlistCategoryData.category_title;
-              const videoRange = playlistCategoryData.video_range;
-              return <PlaylistCategory categoryTitle={categoryTitle} videoRange={videoRange}/>
-           }
-
-          )
-          
-        }
-  
-        
->>>>>>> origin/main
       </Collapse>
       
     </List>

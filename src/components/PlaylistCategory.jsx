@@ -23,11 +23,7 @@ const PlaylistCategory = ({ playlistCategoryName, videoRange, videos }) => {
         <ListItemIcon>
           <StarBorder />
         </ListItemIcon>
-<<<<<<< HEAD:src/components/PlaylistCategory.jsx
         <ListItemText primary={`${videoRange} - ${playlistCategoryName}`} />
-=======
-        <ListItemText primary={`${videoRange} : ${categoryTitle}`} />
->>>>>>> origin/main:src/components/PlaylistCatogory.jsx
       </ListItemButton>
     </List>
   )
