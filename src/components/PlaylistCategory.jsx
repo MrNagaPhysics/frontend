@@ -25,7 +25,7 @@ const PlaylistCategory = ({ playlistCategoryName, videoRange, videos }) => {
         <ListItemIcon>
           <StarBorder />
         </ListItemIcon>
-        <ListItemText primary={`${videoRange} - ${playlistCategoryName}}`} />
+        <ListItemText primary={`${videoRange} - ${playlistCategoryName}`} />
       </ListItemButton>
     </List>
   )
