@@ -1,10 +1,8 @@
 import { Typography } from '@mui/material'
 import Paper from '@mui/material/Paper';
 import Playlist from './Playlist.jsx';
-import { useState } from 'react';
-import PlaylistData from './playlist.json';
 
-const YearGroup = ({ yearGroupName, playlists }) => {
+const YearGroup = ({ yearGroupName, yearGroupNameSlug, playlists }) => {
   // Component used to render a single Year Group section on homepage
   return (
     <>
@@ -14,10 +12,11 @@ const YearGroup = ({ yearGroupName, playlists }) => {
           playlists.map(
             playlist => {
               const playlistName = playlist["playlist_name"]
+              const playlistNameSlug = playlist["slug"]
               const playlistCategories = playlist["playlist_categories"]
               const id = playlist['id']
               
-              return <Playlist key={id} playlistName={playlistName} playlistCategories={playlistCategories}/>
+              return <Playlist key={id} yearGroupNameSlug={yearGroupNameSlug} playlistNameSlug={playlistNameSlug} playlistName={playlistName} playlistCategories={playlistCategories}/>
               
             }
           )

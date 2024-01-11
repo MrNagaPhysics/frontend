@@ -9,6 +9,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Topic from './components/Topic'
 import Login from './components/Login'
 import AccountMenu from './components/AccountMenu';
+import Playlist from './components/Playlist.jsx';
+import { useState, useEffect} from 'react';
+import axios from 'axios';
+import Context from './components/Context.jsx';
+
 
 const darkTheme = createTheme({
   palette: {
@@ -18,8 +23,28 @@ const darkTheme = createTheme({
 
 
 function App() {
+
+  const baseUrl = "http://localhost:8000/main/apps/api/v1/"
+  const [yearGroups, setYearGroups] = useState(null) // Used to capture data associated with each year group (playlist, playlist categories, videos and worksheets)
+  const [mainResourceCategories, setMainResourceCategories] = useState(null) // Used to capture file data - main categories, sub categories and pdf files.
+  
+  useEffect(() => {
+    axios
+      .get(baseUrl)
+      .then(
+        response => {
+          setYearGroups(response.data['year_groups'])
+          setMainResourceCategories(response.data['main_resource_categories'])
+        }
+      )
+  }, [])
+
+
+
+
   return (
     <>
+    <Context.Provider value={yearGroups}>
        <Router>
     <ThemeProvider theme={darkTheme}>
     <CssBaseline />
@@ -37,11 +62,14 @@ function App() {
 
 
               <Route exact path="/" element = {<HomePage />} />
-
-              <Route exact path="/topic" element = {<Topic />} />
            
               <Route exact path="/AccountMenu" element = {<AccountMenu />} />
               <Route exact path="/login" element = {<Login />} />
+
+              <Route path ='/:playlist' element={<Playlist />}/>
+
+              <Route exact path="/:yeargroupparam/:playlistparam/:playlistcategoryparam" element = {<Topic />} />
+
               </Routes>
 
         
@@ -49,6 +77,7 @@ function App() {
         </Container>
         </ThemeProvider>
         </Router>
+      </Context.Provider>
     </>
   );
 }

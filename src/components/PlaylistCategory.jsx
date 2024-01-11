@@ -13,13 +13,13 @@ import { blue } from '@mui/material/colors';
 import StarBorder from '@mui/icons-material/StarBorder';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
-const PlaylistCategory = ({ playlistCategoryName, videoRange, videos }) => {
+const PlaylistCategory = ({ yearGroupNameSlug, playlistCategoryName, playlistNameSlug, playlistCategoryNameSlug, videoRange, videos }) => {
   if (!videoRange) {
     videoRange = "Not Provided"
   }
   return (
     <List component="div" disablePadding>
-      <ListItemButton sx={{ pl: 4 }} href="/topic">
+      <ListItemButton sx={{ pl: 4 }} href={`/${yearGroupNameSlug}/${playlistNameSlug}/${playlistCategoryNameSlug}`}>
         <ListItemIcon>
           <StarBorder />
         </ListItemIcon>
