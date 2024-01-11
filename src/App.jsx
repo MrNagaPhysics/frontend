@@ -24,7 +24,8 @@ const darkTheme = createTheme({
 
 function App() {
 
-  const baseUrl = "http://localhost:8000/main/apps/api/v1/"
+  // const baseUrl = "http://localhost:8000/main/apps/api/v1/"
+  const baseUrl = "https://mrnagaphysics.com/main/apps/api/v1/"
   const [yearGroups, setYearGroups] = useState(null) // Used to capture data associated with each year group (playlist, playlist categories, videos and worksheets)
   const [mainResourceCategories, setMainResourceCategories] = useState(null) // Used to capture file data - main categories, sub categories and pdf files.
   
