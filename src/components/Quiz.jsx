@@ -22,34 +22,34 @@ function Quiz() {
   let [result,setResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null)
 
-  // // // Uncomment when in prod environment
-  // const { id } = useParams()
-  // const hook = () => {
-  //   axios 
-  //   .get(`https://mrnagaphysics.com/main/apps/questions/api/worksheet_questions/${id}/`)
-  //     .then(
-  //       response => {
-  //         setAllQuestions(response.data)
-  //         setLength(response.data.length)
+  // // Uncomment when in prod environment
+  const { id } = useParams()
+  const hook = () => {
+    axios 
+    .get(`https://mrnagaphysics.com/main/apps/questions/api/worksheet_questions/${id}/`)
+      .then(
+        response => {
+          setAllQuestions(response.data)
+          setLength(response.data.length)
   
-  //         //Question specific data
-  //         setQuestionTitle(response.data[questionIndex].question_text)
-  //         setMCQOptions(response.data[questionIndex].mcqs)
-  //         setExplanation(response.data[questionIndex].explanation)
-  //       }
-  //     )
+          //Question specific data
+          setQuestionTitle(response.data[questionIndex].question_text)
+          setMCQOptions(response.data[questionIndex].mcqs)
+          setExplanation(response.data[questionIndex].explanation)
+        }
+      )
 
-  // };
-  // useEffect(hook,[]);
+  };
+  useEffect(hook,[]);
 
-  // Uncomment when in local environment
-  useEffect(() => {
-    setAllQuestions(data)
-    setLength(data.length)
-    setQuestionTitle(data[questionIndex].question_text)
-    setMCQOptions(data[questionIndex].mcqs)
-    setExplanation(data[questionIndex].explanation)
-  }, [])
+  // // Uncomment when in local environment
+  // useEffect(() => {
+  //   setAllQuestions(data)
+  //   setLength(data.length)
+  //   setQuestionTitle(data[questionIndex].question_text)
+  //   setMCQOptions(data[questionIndex].mcqs)
+  //   setExplanation(data[questionIndex].explanation)
+  // }, [])
 
   const handleClickAnswer = (event) => {
     if(lock ===false){
