@@ -22,11 +22,19 @@ function Quiz() {
   let [result,setResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null)
 
-  // // Uncomment when in prod environment
+  // Change to false before pushing to main.
+  const DEV_MODE = false
+  let baseURL = null;
+  if (DEV_MODE) {
+    baseURL = "http://localhost:8000/main/apps/questions"
+  } else {
+    baseURL = "https://mrnagaphysics.com/main/apps/questions"
+  }
   const { id } = useParams()
   const hook = () => {
+  
     axios 
-    .get(`https://mrnagaphysics.com/main/apps/questions/api/worksheet_questions/${id}/`)
+    .get(`${baseURL}/api/worksheet_questions/${id}/`)
       .then(
         response => {
           setAllQuestions(response.data)
@@ -41,15 +49,6 @@ function Quiz() {
 
   };
   useEffect(hook,[]);
-
-  // // Uncomment when in local environment
-  // useEffect(() => {
-  //   setAllQuestions(data)
-  //   setLength(data.length)
-  //   setQuestionTitle(data[questionIndex].question_text)
-  //   setMCQOptions(data[questionIndex].mcqs)
-  //   setExplanation(data[questionIndex].explanation)
-  // }, [])
 
   const handleClickAnswer = (event) => {
     if(lock ===false){

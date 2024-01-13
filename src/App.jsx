@@ -55,12 +55,7 @@ function App() {
           <Box textAlign="center" mt={4}>
          
               <Routes>
-                {/* uncomment in developenv */}
-              {/* <Route exact path="quiz/:id" element = {<Quiz />} /> */}
-
-              {/* uncomment in local env */}
-              <Route exact path="quiz" element = {<Quiz />} />
-
+              <Route exact path="quiz/:id" element = {<Quiz />} />
 
               <Route exact path="/" element = {<HomePage />} />
            
