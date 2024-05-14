@@ -29,16 +29,16 @@ function App() {
   const [yearGroups, setYearGroups] = useState(null) // Used to capture data associated with each year group (playlist, playlist categories, videos and worksheets)
   const [mainResourceCategories, setMainResourceCategories] = useState(null) // Used to capture file data - main categories, sub categories and pdf files.
   
-  useEffect(() => {
-    axios
-      .get(baseUrl)
-      .then(
-        response => {
-          setYearGroups(response.data['year_groups'])
-          setMainResourceCategories(response.data['main_resource_categories'])
-        }
-      )
-  }, [])
+  // useEffect(() => {
+  //   axios
+  //     .get(baseUrl)
+  //     .then(
+  //       response => {
+  //         setYearGroups(response.data['year_groups'])
+  //         setMainResourceCategories(response.data['main_resource_categories'])
+  //       }
+  //     )
+  // }, [])
 
 
 
